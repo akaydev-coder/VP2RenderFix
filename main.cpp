@@ -23,7 +23,7 @@ int main()
     }
 
     //Register application so it will be launched automagically next time
-    if (!vr::VRApplications()->IsApplicationInstalled("elvissteinjr.ForceCompositorScale"))
+    if (!vr::VRApplications()->IsApplicationInstalled("AkayDev.VP2RF"))
     {
         //This is supposed to be just a simple crude application, so we'll make due with this for getting the application path (this likely won't work on unicode paths)
         DWORD length = GetCurrentDirectory(0, NULL);
@@ -40,7 +40,7 @@ int main()
 
             if (app_error == vr::VRApplicationError_None)
             {
-                vr::VRApplications()->SetApplicationAutoLaunch("elvissteinjr.ForceCompositorScale", true);
+                vr::VRApplications()->SetApplicationAutoLaunch("AkayDev.VP2RF", true);
             }
         }
 
@@ -62,8 +62,21 @@ int main()
         sprintf_s(buffer, 16, "gpuSpeed%d", i);
         vr::VRSettings()->SetInt32("GpuSpeed", buffer, gpuspeed);
     }
-    vr::VRSettings()->SetInt32("GpuSpeed", "gpuSpeedHorsepower", gpuspeed);
-    vr::VRSettings()->SetFloat("GpuSpeed", "gpuSpeedRenderTargetScale", rendertarget);
+    vr::VRSettings()->SetInt32("GpuSpeed", "gpuSpeed0", 15000);
+    vr::VRSettings()->SetInt32("GpuSpeed", "gpuSpeed1", 15000);
+    vr::VRSettings()->SetInt32("GpuSpeed", "gpuSpeed2", 15000);
+    vr::VRSettings()->SetInt32("GpuSpeed", "gpuSpeed3", 15000);
+    vr::VRSettings()->SetInt32("GpuSpeed", "gpuSpeed4", 15000);
+    vr::VRSettings()->SetInt32("GpuSpeed", "gpuSpeed5", 15000);
+    vr::VRSettings()->SetInt32("GpuSpeed", "gpuSpeed6", 15000);
+    vr::VRSettings()->SetInt32("GpuSpeed", "gpuSpeed7", 15000);
+    vr::VRSettings()->SetInt32("GpuSpeed", "gpuSpeed8", 15000);
+    vr::VRSettings()->SetInt32("GpuSpeed", "gpuSpeed9", 15000);
+    vr::VRSettings()->SetInt32("GpuSpeed", "gpuSpeedCount", 10);
+    vr::VRSettings()->SetInt32("GpuSpeed", "gpuSpeedHorsepower", 15000);
+    vr::VRSettings()->SetFloat("GpuSpeed", "gpuSpeedRenderTargetScale", 1.5);
+    vr::VRSettings()->SetFloat("steamvr", "supersampleScale", 1.0f);
+    vr::VRSettings()->SetBool("steamvr", "allowSupersampleFiltering", true);
     vr::VRSettings()->Sync(true);
 
     vr::VR_Shutdown();

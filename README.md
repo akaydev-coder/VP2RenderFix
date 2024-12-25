@@ -1,5 +1,5 @@
-# SteamVR-ForceCompositorScale
-Resets the GpuSpeed settings to match the custom super sample scale.
+# VP2RenderFix2
+Credits going to the original Author elvissteinjr - SteamVR-ForceCompositorScale (Code Construct and Overlay) and craftyinsomniac - WFOVFix (Parameter and Datatypes)
 
 # What it does
 - Automatically reset the GpuSpeed settings to match the custom super sample scale or custom value (at least for Valve Index)
