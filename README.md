@@ -1,4 +1,4 @@
-# VP2RenderFix2
+# VP2RenderFix
 Credits going to the original Author elvissteinjr - SteamVR-ForceCompositorScale (Code Construct and Overlay) and craftyinsomniac - WFOVFix (Parameter and Datatypes)
 
 # What it does
