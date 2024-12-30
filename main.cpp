@@ -48,7 +48,6 @@ int main()
     }
 
     float rendertarget = vr::VRSettings()->GetFloat("steamvr", "supersampleScaleCompositor"); //Base on custom compositor override
-
     if (rendertarget == 0.0f) //As supersampleScaleCompositor is not a default setting, it will default to 0 if not present
     {
         rendertarget = vr::VRSettings()->GetFloat("steamvr", "supersampleScale"); //Base on manual override
@@ -75,8 +74,6 @@ int main()
     vr::VRSettings()->SetInt32("GpuSpeed", "gpuSpeedCount", 10);
     vr::VRSettings()->SetInt32("GpuSpeed", "gpuSpeedHorsepower", 15000);
     vr::VRSettings()->SetFloat("GpuSpeed", "gpuSpeedRenderTargetScale", 1.5);
-    vr::VRSettings()->SetFloat("steamvr", "supersampleScale", 1.0f);
-    vr::VRSettings()->SetBool("steamvr", "allowSupersampleFiltering", true);
     vr::VRSettings()->Sync(true);
 
     vr::VR_Shutdown();

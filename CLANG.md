@@ -1,0 +1,1 @@
+clang -v -o VP2RenderFix2.exe main.cpp openvr_api.lib
